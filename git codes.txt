@@ -1,0 +1,44 @@
+=============git commands===========
+%git init   = initialize repo
+%git add .  = add file to the repo
+%git commit -m "Message" = commit to repo and a message
+%git status 
+%git log
+%git branch -M main
+%git remote add origin https://github.com/BossErL/test-myself.git
+%git push -u origin main
+
+
+
+…or push an existing repository from the command line
+%git remote add origin https://github.com/BossErL/test-myself.git
+%git branch -M master / main /<branch created>
+%git push -u origin master / main   = if u want to update contents in gitserver / hub
+
+
+using SSH mechanish to login on Github
+%ssh-keygen -t rsa -C erlonmayan08@gmail.com
+
+
+%ssh -T git@github.com
+to check if the ssh key is working
+
+%git branch -m master
+change branch
+
+%git checkout 
+command lets you navigate between the branches created by git branch
+
+%git clone Server_Repo_URL
+if u want to clone repo from Server to Local
+
+%git log --pretty=oneline
+to check commit history
+
+%git reset --soft <history ID> 
+go back to history (need the ID of Commit History) but the changes in previous commit does not affect.
+but you can do this if you did not yet push the files to the server
+
+%git revert <history ID>
+undo particular commit
+
