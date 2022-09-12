@@ -1,4 +1,8 @@
 =============git commands===========
+created by:
+Jhon Erlon Cocjin
+DevOps is my DreamJob!!!!!!!!!!!!!!!!!!!!!!
+	
 %git init   = initialize repo
 %git add .  = add file to the repo
 %git commit -m "Message" = commit to repo and a message
