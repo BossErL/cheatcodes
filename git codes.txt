@@ -97,7 +97,41 @@ cmd to check container / running
 cmd to check image
 %sudo Docker images
 
-cmd ---
+cmd to run container and give a name
+%sudo docker run -it mysql /bin/bash
+
+if container wont stop or cannot kill
+%sudo systemctl disable apparmor.service --now
+%sudo service apparmor teardown
+%sudo aa-remove-unknown
+%reboot
+
+Cmd to create a new Docker image from the changes made in Container
+%Docker Container commit 
+
+Cmd to copy files between the local filesystem and a Docker Container
+%Docker Container cp
+
+cmd to remove all stopped containers
+%Docker Container prune
+
+cmd to terminate one or more running containers
+%Docker Container Kill
+
+cmd to run a new command in a running Containers
+%Docker Container exec
+
+cmd to list Docker Containers
+%Docker Container ls
+
+cmd to remove one or more containers
+%Docker Container rm
+
+cmd to restart one or more containers
+%Docker Container restart
+
+
+
 
 
 
