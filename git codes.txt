@@ -46,3 +46,61 @@ but you can do this if you did not yet push the files to the server
 %git revert <history ID>
 undo particular commit
 
+%git branch -v 
+shows the branch created and master branch
+
+%git branch -D <name of the branch>
+Delete Branch locally
+
+%git push origin --delete <name of the branch>
+Delete Branch on Server 
+
+===============================================================
+
+Docker cmds
+
+Install Docker on your system
+%sudo yum install Docker or 
+type Docker on terminal to check the cmd to install the Docker 
+
+Start Docker Daemon
+%system ctl start Docker
+
+cmd to remove Docker img
+%sudo Docker rmi <imageID>
+
+cmd to download an img from Docker hub
+%sudo Docker pull <image_name>
+
+cmd to run an img
+%sudo Docker run <image_name>
+
+cmd to pull a Docker image from a Docker Hub
+%sudo Docker pull <image_name:tag>
+
+cmd to build an image from a Dockerfile
+%sudo Docker build -t [image_name]:tag
+
+cmd to shutdown the container
+%sudo Docker stop <container_ID>
+
+cmd to acces a running container
+%sudo Docker exec it <container_id> bash
+
+cmd to create container
+%sudo docker run -d -p0.0.0.0:80:80 <container_name:tag>
+
+cmd to check container / running 
+%sudo Docker ps
+%sudo Docker ps -a
+
+cmd to check image
+%sudo Docker images
+
+cmd ---
+
+
+
+
+
+
