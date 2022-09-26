@@ -15,44 +15,44 @@ DevOps is my DreamJob!!!!!!!!!!!!!!!!!!!!!!
 
 
 …or push an existing repository from the command line
-%git remote add origin https://github.com/BossErL/test-myself.git
-%git branch -M master / main /<branch created>
-%git push -u origin master / main   = if u want to update contents in gitserver / hub
+	%git remote add origin https://github.com/BossErL/test-myself.git
+	%git branch -M master / main /<branch created>
+	%git push -u origin master / main   = if u want to update contents in gitserver / hub
 
 
 using SSH mechanish to login on Github
-%ssh-keygen -t rsa -C erlonmayan08@gmail.com
+	%ssh-keygen -t rsa -C erlonmayan08@gmail.com
 
 
-%ssh -T git@github.com
+	%ssh -T git@github.com
 to check if the ssh key is working
 
-%git branch -m master
+	%git branch -m master
 change branch
 
-%git checkout 
+	%git checkout 
 command lets you navigate between the branches created by git branch
 
-%git clone Server_Repo_URL
+	%git clone Server_Repo_URL
 if u want to clone repo from Server to Local
 
-%git log --pretty=oneline
+	%git log --pretty=oneline
 to check commit history
 
-%git reset --soft <history ID> 
+	%git reset --soft <history ID> 
 go back to history (need the ID of Commit History) but the changes in previous commit does not affect.
 but you can do this if you did not yet push the files to the server
 
-%git revert <history ID>
+	%git revert <history ID>
 undo particular commit
 
-%git branch -v 
+	%git branch -v 
 shows the branch created and master branch
 
-%git branch -D <name of the branch>
+	%git branch -D <name of the branch>
 Delete Branch locally
 
-%git push origin --delete <name of the branch>
+	%git push origin --delete <name of the branch>
 Delete Branch on Server 
 
 ===============================================================
@@ -60,78 +60,78 @@ Delete Branch on Server
 Docker cmds
 
 Install Docker on your system
-%sudo yum install Docker or 
-type Docker on terminal to check the cmd to install the Docker 
+	%sudo yum install Docker 
+or type Docker on terminal to check the cmd to install the Docker 
 
 Start Docker Daemon
-%system ctl start Docker
+	%system ctl start Docker
 
 cmd to remove Docker img
-%sudo Docker rmi <imageID>
+	%sudo Docker rmi <imageID>
 
 cmd to download an img from Docker hub
-%sudo Docker pull <image_name>
+	%sudo Docker pull <image_name>
 
 cmd to run an img
-%sudo Docker run <image_name>
+	%sudo Docker run <image_name>
 
 cmd to pull a Docker image from a Docker Hub
-%sudo Docker pull <image_name:tag>
+	%sudo Docker pull <image_name:tag>
 
 cmd to build an image from a Dockerfile
-%sudo Docker build -t [image_name]:tag
+	%sudo Docker build -t [image_name]:tag
 
 cmd to shutdown the container
-%sudo Docker stop <container_ID>
+	%sudo Docker stop <container_ID>
 
 cmd to acces a running container
-%sudo Docker exec it <container_id> bash
+	%sudo Docker exec it <container_id> bash
 
 cmd to create container
-%sudo docker run -d -p0.0.0.0:80:80 <container_name:tag>
+	%sudo docker run -d -p0.0.0.0:80:80 <container_name:tag>
 
 cmd to check container / running 
-%sudo Docker ps
-%sudo Docker ps -a
+	%sudo Docker ps
+	%sudo Docker ps -a
 
 cmd to check image
-%sudo Docker images
+	%sudo Docker images
 
 cmd to run container and give a name
-%sudo docker run -it mysql /bin/bash
+	%sudo docker run -it mysql /bin/bash
 
 if container wont stop or cannot kill
-%sudo systemctl disable apparmor.service --now
-%sudo service apparmor teardown
-%sudo aa-remove-unknown
-%reboot
+	%sudo systemctl disable apparmor.service --now
+	%sudo service apparmor teardown
+	%sudo aa-remove-unknown
+	%reboot
 
 Cmd to create a new Docker image from the changes made in Container
-%Docker Container commit 
+	%Docker Container commit 
 
 Cmd to copy files between the local filesystem and a Docker Container
-%Docker Container cp
+	%Docker Container cp
 
 cmd to remove all stopped containers
-%Docker Container prune
+	%Docker Container prune
 
 cmd to terminate one or more running containers
-%Docker Container Kill
+	%Docker Container Kill
 
 cmd to run a new command in a running Containers
-%Docker Container exec
+	%Docker Container exec
 
 cmd to list Docker Containers
-%Docker Container ls
+	%Docker Container ls
 
 cmd to remove one or more containers
-%Docker Container rm
+	%Docker Container rm
 
 cmd to restart one or more containers
-%Docker Container restart
+	%Docker Container restart
 
 cmd to initialize manager on Docker Swarm
-%Docker swarm init --advertise-addr 192.168.2.151
+	%Docker swarm init --advertise-addr 192.168.2.151
 
 
 Automate Search Run First test case using selenium
@@ -142,6 +142,25 @@ Automate Search Run First test case using selenium
 5. sudo pip install selenium
 6. Open browser download selenium jar file
 7. download chrome driver should be same google version and download linux64.zip
+
+
+Docker  Compose
+
+Cmd to install Docker Compose using pip:
+	%pip install -U Docker Compose
+
+Start all sevices with a command:
+	%Docker Compose up
+
+Start all servuices with a command:
+	%Docker Compose down
+
+Cmd to check the version of Docker Compose:
+	%Docker-compose-v
+
+
+
+
 
 
 
