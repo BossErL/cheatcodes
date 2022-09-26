@@ -130,6 +130,19 @@ cmd to remove one or more containers
 cmd to restart one or more containers
 %Docker Container restart
 
+cmd to initialize manager on Docker Swarm
+%Docker swarm init --advertise-addr 192.168.2.151
+
+
+Automate Search Run First test case using selenium
+1. locate selenium
+2. sudo apt install plocate
+3. sudo app-get update
+4. sudo apt install phyton3-pip
+5. sudo pip install selenium
+6. Open browser download selenium jar file
+7. download chrome driver should be same google version and download linux64.zip
+
 
 
 
