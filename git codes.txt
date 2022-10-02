@@ -158,7 +158,105 @@ Start all servuices with a command:
 Cmd to check the version of Docker Compose:
 	%Docker-compose-v
 
+Cmd to run Docker Compose file
+	%Docker-compose up -d
 
+cmd to list down all the process
+	%Docker ps
+
+cmd to scale a service
+	%Docker Compose up -d --scale
+
+cmd to use YAML files to configure app services
+	%Docker Compose.yml
+
+cmd to give permission in docker daemon socker
+	%sudo chmod 666 /var/run/docker.sock
+
+=========================================================
+Kubernetes
+
+1. sudo apt-get update
+2. sudo apt-get install -y apt-transport-https
+3. install Docker (sudo apt install docker.io)
+4. enable docker run cmd 
+	sudo systemctl start docker
+	sudo systemctl enable docker
+5. sudo apt-get install curl
+6. sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg| sudo apt-key add
+7. sudo chmod 777 /etc/apt/sources.list.d/
+8. make kubernetes.list (txt) file save it to com/etc/ept/sources.list
+inside the file type:
+
+"deb https://apt.kubernetes.io/ kubernetes-xenial main"
+to check the file content 
+cat /etc/apt/sources.list.d/kubernetes.list
+it should display the content of kubernetes.list file
+%echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+%sudo apt-get update
+%sudo apt-get install -y kubelet kubeadm kubectl
+%sudo apt-mark hold kubelet kubeadm kubectl
+9.sudo apt-get update
+10. install Kubernetes components
+	sudo apt-get install -y kubelet kubeadm kubectl kubernestes-cni
+11. Initialize master node
+	sudo swapoff -a (to disable swapping on other devices)
+	Initialize kubeadm
+	sudo kubeadm init --ignore-preflight-errors=NumCPU
+
+
+
+
+============================================================
+Installing Maven and sample
+1
+
+	
+
+
+
+
+
+
+
+
+
+
+
+Class A IP address
+1.0.0.0 - 127.0.0.0
+
+Class B IP address
+128.0.0.0 - 191.255.255.255
+
+Class C IP address
+192.0.0.0 - 223.255.255.255
+
+Class D IP address
+224.0.0.0 - 239.255.255.255
+
+Class E IP address
+240.0.0.0 - 255.255.255.255
+
+Automation Testing
+https://www.youtube.com/watch?v=yFzv36r7Z8o
+
+Maven Commands
+https://jenkov.com/tutorials/maven/maven-commands.html
+
+fix for deprecated key
+https://www.youtube.com/watch?v=FyaZsbEOF54
+
+fix for package jenkins has no installation candidate
+https://www.youtube.com/watch?v=U8_IUZElONA
+
+***install google in Ubuntu
+Download
+$wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+install
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+***install Jenkins in Ubuntu
 
 
 
