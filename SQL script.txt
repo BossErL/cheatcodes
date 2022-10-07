@@ -1,0 +1,21 @@
+Select 
+OrderID,
+OrderDate,
+OrderTotal,
+CustomerName,
+Phone,
+c.CustomerID
+From dbo.Orders o 
+Inner Join dbo.Customers c on o.CustomerID = c.CustomerID
+Order by OrderID desc
+
+===================================
+Select * From dbo.Orders
+where OrderDate <= '2/18/2022'
+Order By OrderDate desc
+
+
+===================================
+Select sum(OrderTotal) From dbo.Orders
+where OrderDate <= Dateadd(MONTH,-1,GETDATE())
+group by CustomerID

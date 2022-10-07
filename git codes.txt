@@ -262,6 +262,70 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 
 
+================================================
+**Create Angular App and Deploy it to Docker Hub
+Needed:
+Node.js
+Angular cli
+Docker
+
+1. Download and Install Node.js
+Download latest version and extract it then move to home directory
+%tar -xf (file you want to extract)
+cmd to extract .tar file
+2. Install Angular Cli
+
+%npm install -g @angular/cli
+
+3. make folder at home dir
+
+4. go to created folder and run 
+% ng new "angular-app"
+
+5. make a Dockerfile inside angular-app folder
+Paste in Dockerfile
+# stage 1 
+FROM node:latest as node
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build --prod
+
+# stage 2
+FROM nginx:alpine
+COPY --from=node /app/dist/angular-app /usr/share/nginx/html
+
+6. Build the Image
+%docker build --rm -f angular-app/Dockerfile -t angular-app:v1 angular-app
+
+7.Run the Image
+%docker run --rm -d -p 80:80 angular-app:v1
+
+8.Login to Docker Hub 
+
+9."Use the docker tag" command to give the getting-started image a new name. Be sure to swap out YOUR-USER-NAME with your Docker ID.
+
+% docker tag angular-app:v1 whitehot/angular-app:v1
+	
+10.Push to Docker hub
+
+% docker push whitehot/angular-app:v1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

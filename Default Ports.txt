@@ -1,0 +1,24 @@
+Common Localhost Ports
+80
+81
+8080
+8081
+8888
+8890
+8000
+8889
+8443
+7080
+3000
+
+========================
+Default Ports
+httpd: 80
+Apache: 80
+NGINX: 80 or 443
+MAVEN: 8080
+Apache Tomcat: 8080
+PortgreSQL: 5432
+MongoDD: 27017 - 27020
+MySQL: 3306
+MSSQL: 1433, 4022, 135, 1434/tcp  1434/udp
