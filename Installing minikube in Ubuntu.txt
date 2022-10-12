@@ -25,16 +25,57 @@ kubectl config view
 kubectl cluster-info
 kubectl get nodes
 minikube status
+kubectl apply -f shopfront.yaml
 
 Install maven 
 sudo apt install maven -y
 
-
+==============================================================================
 If have problem on unhealthy virtualbox run this cmd
 sudo modprobe vboxdrv
 
+kubectl config get-contexts
+
+kubectl config use-context minikube
+
+minikube delete && minikube start 
+
+
 ===============================================================================
 Create minikube cluster
+
+minikube start 
+or minikube start --driver=none
+
+to check kubernetes Control Plane /DNS
+kubectl cluster-info
+
+
+mvn clean install inside shopfront dir to make a target dir for .jar file
+
+
+then build the docker image
+
+docker build -t whitehot/shopfront:latest .
+
+check images
+then go inside kubernetes dir run the yaml files by
+kubectl apply -f stockmanager-service.yaml 
+to make the pods , services and deployments
+
+to run services 
+minikube service shopfront
+
+
+
+
+
+gcloud compute firewall-rules create "allow-internal-memcache" --allow=tcp:32011 --source-ranges="192.168.49.2/24,192.168.49.0/24" --description="Allow internal traffic and drop outside"
+
+
+
+
+
 
 
 

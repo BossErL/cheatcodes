@@ -1,0 +1,10 @@
+sudo su - 
+vim /etc/ssh/sshd_config
+
+:set bg=dark
+change Password Authentication to Yes
+
+save (:wq!)
+
+service sshd restart
+adduser
