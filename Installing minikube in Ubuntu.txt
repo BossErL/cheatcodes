@@ -4,21 +4,21 @@
 4.sudo apt install virtualbox virtualbox-ext-pack (if have error run sudo apt-get update --fix-missing)
 5.wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 6.copy the downloaded minikube
-	sudo cp minikube-linux-amd64 /usr/local/bin/minikube
+	-sudo cp minikube-linux-amd64 /usr/local/bin/minikube
 7.give root permission to the dir
-	sudo chmod 755 /usr/local/bin/minikube
+	-sudo chmod 755 /usr/local/bin/minikube
 8.Install Utilities (kubectl) allow cmd to communicate to kubernetes
-	curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+	-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
 9. To make it executable
-	chmod +x ./kubectl
+	-chmod +x ./kubectl
 10. Move kubectl to path
-	sudo mv ./kubectl /usr/local/bin/kubectl
+	-sudo mv ./kubectl /usr/local/bin/kubectl
 
 11. Verify the version of kubectl
-	kubectl version -o json
+	-kubectl version -o json
 12. Start minikube
-	minikube start
+	-minikube start
 
 
 kubectl config view
@@ -32,39 +32,39 @@ sudo apt install maven -y
 
 ==============================================================================
 If have problem on unhealthy virtualbox run this cmd
-sudo modprobe vboxdrv
+-sudo modprobe vboxdrv
 
-kubectl config get-contexts
+-kubectl config get-contexts
 
-kubectl config use-context minikube
+-kubectl config use-context minikube
 
-minikube delete && minikube start 
+-minikube delete && minikube start 
 
 
 ===============================================================================
 Create minikube cluster
 
-minikube start 
-or minikube start --driver=none
+-minikube start 
+or -minikube start --driver=none
 
 to check kubernetes Control Plane /DNS
-kubectl cluster-info
+-kubectl cluster-info
 
 
-mvn clean install inside shopfront dir to make a target dir for .jar file
+-mvn clean install inside shopfront dir to make a target dir for .jar file
 
 
 then build the docker image
 
-docker build -t whitehot/shopfront:latest .
+-docker build -t whitehot/shopfront:latest .
 
 check images
 then go inside kubernetes dir run the yaml files by
-kubectl apply -f stockmanager-service.yaml 
+-kubectl apply -f stockmanager-service.yaml 
 to make the pods , services and deployments
 
 to run services 
-minikube service shopfront
+-minikube service shopfront
 
 
 
@@ -83,3 +83,10 @@ gcloud compute firewall-rules create "allow-internal-memcache" --allow=tcp:32011
 
 
 -by Liv4IT yt channel
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
