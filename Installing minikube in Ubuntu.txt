@@ -1,0 +1,44 @@
+1.sudo apt-get update
+2.sudo apt-get install curl
+3.sudo apt-get install apt-transport-https
+4.sudo apt install virtualbox virtualbox-ext-pack (if have error run sudo apt-get update --fix-missing)
+5.wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+6.copy the downloaded minikube
+	sudo cp minikube-linux-amd64 /usr/local/bin/minikube
+7.give root permission to the dir
+	sudo chmod 755 /usr/local/bin/minikube
+8.Install Utilities (kubectl) allow cmd to communicate to kubernetes
+	curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+9. To make it executable
+	chmod +x ./kubectl
+10. Move kubectl to path
+	sudo mv ./kubectl /usr/local/bin/kubectl
+
+11. Verify the version of kubectl
+	kubectl version -o json
+12. Start minikube
+	minikube start
+
+
+kubectl config view
+kubectl cluster-info
+kubectl get nodes
+minikube status
+
+Install maven 
+sudo apt install maven -y
+
+
+If have problem on unhealthy virtualbox run this cmd
+sudo modprobe vboxdrv
+
+===============================================================================
+Create minikube cluster
+
+
+
+
+
+
+-by Liv4IT yt channel

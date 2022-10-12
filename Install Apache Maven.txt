@@ -1,0 +1,49 @@
+
+Install maven 
+sudo apt install maven -y
+
+
+Installing Apache Maven on Ubuntu 22.04 using Manual method
+Step 1: Install Java
+	sudo apt install default-jdk -y
+
+Step 2: Download Apache Maven latest version
+	wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp
+
+Step 3: Extract downloaded Apache Maven package
+	cd /tmp
+
+Then, execute the following command to extract the downloaded Apache Maven archive file:
+	tar -xvzf apache-maven-3.6.3-bin.tar.gz
+
+After extracting the required package, copy it to the “/opt/” directory:
+	sudo cp -r apache-maven-3.6.3 /opt/maven
+
+Step 4: Set up environment variables
+In the next step, we will set up the environment variables by creating a maven script file “maven.sh” inside the “/etc.profile.d” directory:
+	sudo nano /etc/profile.d/maven.sh
+
+
+In the opened “maven.sh” file, paste the follow code and press “CTRL+O” to save it:
+	export JAVA_HOME=/usr/lib/jvm/default-java
+	export M2_HOME=/opt/maven
+	export MAVEN_HOME=/opt/maven
+	export PATH=${M2_HOME}/bin:${PATH}
+
+
+or Manual setting of Maven_HOME
+	export MAVEN_HOME=/usr/share/maven
+
+
+Next, write out the following command for enabling the executable permission of the created Apache Maven script:
+ 	sudo chmod +x /etc/profile.d/maven.sh
+
+After doing so, load the environment variables with the help of the following “source” command:
+	source /etc/profile.d/maven.sh
+
+Step 5: Check Apache Maven version
+	mvn -version
+==============================================================================================================================================================
+How to uninstall Apache Maven from Ubuntu 22.04
+
+ 	sudo apt remove maven

@@ -312,6 +312,15 @@ COPY --from=node /app/dist/angular-app /usr/share/nginx/html
 % docker push whitehot/angular-app:v1
 
 
+==============================================================
+Docker Networks
+docker network ls       <<< to check list of networks available
+docker network inspect (name of network) <<< to inspect containers network
+docker network create --driver bridge --subnet 192.168.2.0/24 --gateway 192.168.2.1 (name of network)  <<< to create network
+docker network connect --ip (ip you want to set) (name of network) (name of container)
+
+
+
 
 
 
