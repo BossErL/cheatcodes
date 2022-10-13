@@ -74,7 +74,8 @@ gcloud compute firewall-rules create "allow-internal-memcache" --allow=tcp:32011
 
 
 
-
+Enable http proxy to access dashboard from a remote system
+kubectl proxy --address='0.0.0.0' -disable-filter=true
 
 
 
