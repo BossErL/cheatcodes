@@ -80,6 +80,9 @@ kubectl proxy --address='0.0.0.0' -disable-filter=true
 Disable Firewall
 sudo firewall-cmd --zone=public --add-port=8001/tcp --permanent
 
+Restart a pods
+kubectl rollout restart -n default deployment stockmanager
+
 
 
 
