@@ -83,8 +83,8 @@ sudo firewall-cmd --zone=public --add-port=8001/tcp --permanent
 Restart a pods
 kubectl rollout restart -n default deployment stockmanager
 
-
-
+Kubectl Basic Commands - Create and Debug Pod in a Minikube cluster
+https://www.youtube.com/watch?v=azuwXALfyRg
 
 
 
